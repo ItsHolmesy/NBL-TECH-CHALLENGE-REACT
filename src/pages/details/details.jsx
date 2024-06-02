@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRoute } from 'wouter';
-import fetchRetry from '../../fetchRetry';
+import fetchRetry from '../../utils/fetchRetry';
 
 const Details = () => {
   const [productDetail, setProductDetail] = useState(null);

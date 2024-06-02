@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <h1>Home Page</h1>
       {error ? (
         <p>Error: {error}</p>
@@ -33,7 +33,7 @@ const Home = () => {
           ))}
         </ul>
       )}
-    </div>
+    </>
   );
 }
 
