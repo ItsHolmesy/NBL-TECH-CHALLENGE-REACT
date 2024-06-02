@@ -1,8 +1,39 @@
-# React + Vite
+# Matt's Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## STEPS TAKEN
+	1. Import Wouter for use with React
+	2. Created baseline files and directories
+	3. Built error testing & Retry System
+	4. Migrated Retry System into a Hook.
 
-Currently, two official plugins are available:
+## EXPLANATIONS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Build application/Wouter Usage
+
+First thing out of the way: React doesn't come with a router out of the box, and the ones offered differ from version to version. As such I opted for a fairly low-impact router known as wouter, lightweight and reliant on hooks - which also prompted another decision down the line in development.
+
+I relied mainly on react since that's where most of my knowledge stems from, as much as I'd love to give vue a try, my knowledge isn't as strong with it.
+
+### Baseline Files & Directories
+
+Fairly straight forward, I like to split most of my components pretty heavily so splitting css files, making scss variable files and so on was my first course of action after installing the necessary files such as Sass, React and Wouter.
+
+### Build Error Testing
+
+Initially I built out some tests for the API fetching and display. Given the time constraints, I opted to only write tests for the main Home and Details sections as that seemed to be where the majority of functionality was due to go. With more time I would have added tests for pretty much everything within reason.
+
+### Built Hook System
+
+Wouter works off of Hooks, which was a tool I wanted to really demonstrate here, by combining the API fetching and retry system I was able to remove a lot of the workload from the 'front end' of the app itself.
+
+## FURTHER IMPROVEMENTS
+
+Given unlimited time etc, (and also if I hadn't have been sick during the entire timeframe) there are a number of improvements that could be made to the codebase:
+
+ - Rewrite in typescript and use Babel - This would remove the need to append .js to all imports and would make for a much nicer experience as typescript would provide type hinting and safety throughout the application
+
+ - Extend more error types - Currently I've just used some basic error types, but error handling could be much improved by adding unique error types that can be caught and handled. This could then allow reintroduction of an error map using the error type as keys.
+
+- Implement device variability - I had intended to use Sass to help with getting the website ready for mobile devices and varying screen sizes. However, given time constraints I was unable to do so. You can see the basic setup for it within the _variables.scss file contained within the styles folder.
+
+- Further functionality - 
