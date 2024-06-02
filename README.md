@@ -12,7 +12,7 @@
 
 First thing out of the way: React doesn't come with a router out of the box, and the ones offered differ from version to version. As such I opted for a fairly low-impact router known as wouter, lightweight and reliant on hooks - which also prompted another decision down the line in development.
 
-I relied mainly on react since that's where most of my knowledge stems from, as much as I'd love to give vue a try, my knowledge isn't as strong with it.
+I relied mainly on react since that's where most of my knowledge stems from, as much as I'd love to give vue a try, my knowledge isn't as strong with it. Along with that, I utilised vite to create this react app, due to the npx method being outdated and no longer supported.
 
 ### Baseline Files & Directories
 
@@ -37,3 +37,7 @@ Given unlimited time etc, (and also if I hadn't have been sick during the entire
 - Implement device variability - I had intended to use Sass to help with getting the website ready for mobile devices and varying screen sizes. However, given time constraints I was unable to do so. You can see the basic setup for it within the _variables.scss file contained within the styles folder.
 
 - Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls. Also high on my list would be a search function and sort by category.
+
+
+## HOW-TO
+Please download the file as a zip, and run via commandline as ```npm run build.```
