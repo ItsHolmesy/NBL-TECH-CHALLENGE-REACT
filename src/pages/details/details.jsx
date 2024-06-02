@@ -1,42 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { useRoute } from 'wouter';
-import fetchRetry from '../../utils/fetchRetry';
+import useRetryingFetch from '../../hooks/useRetryingFetch';
 
 const Details = () => {
-  const [productDetail, setProductDetail] = useState(null);
-  const [error, setError] = useState(null);
-  const [, params] = useRoute("/detail/:id");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        if (params && params.id) {
-          const data = await fetchRetry(`https://dummyjson.com/products/${params.id}`);
-          setProductDetail(data);
-        }
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-
-    fetchData();
-  }, [params]);
+  const params = useParams()
+  const [productDetail, isLoading, error] = useRetryingFetch(`https://dummyjson.com/products/${params.id}`)
 
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  if (!productDetail) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h1>{productDetail.title}</h1>
-      <img src={productDetail.thumbnail} alt={productDetail.title} />
-      <p>{productDetail.description}</p>
-      <p>Price: ${productDetail.price}</p>
-      <p>Brand: {productDetail.brand}</p>
+      <h1>{productDetail?.title}</h1>
+      <img src={productDetail?.thumbnail} alt={productDetail?.title} />
+      <p>{productDetail?.description}</p>
+      <p>Price: ${productDetail?.price}</p>
+      <p>Brand: {productDetail?.brand}</p>
     </div>
   );
 }
