@@ -17,7 +17,7 @@ const Details = () => {
   return (
     <div>
       <h1 className='product-title'>{productDetail?.title}</h1>
-      <img src={productDetail?.thumbnail} alt={productDetail?.title} />
+      <img className='product-details' src={productDetail?.thumbnail} alt={productDetail?.title} />
       <p className='product-details'>{productDetail?.description}</p>
       <p className='product-price'>Price: ${productDetail?.price}</p>
       <p className='product-brand'>Brand: {productDetail?.brand}</p>
