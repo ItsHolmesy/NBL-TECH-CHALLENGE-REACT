@@ -4,6 +4,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column; 
     align-items: center;
 }
 
@@ -12,7 +13,7 @@
 /* Container for the product details */
 .product-details {
     display: flex;
-    flex-direction: column; 
+
     align-items: center;    
     text-align: center;
     padding: 20px;
