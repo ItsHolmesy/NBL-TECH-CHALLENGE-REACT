@@ -1,3 +1,4 @@
+import { useParams } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
 
 const Details = () => {

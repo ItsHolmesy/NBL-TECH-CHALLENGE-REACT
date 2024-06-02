@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
+import './home.css'
 
 const Home = () => {
   const [data, isLoading, error] = useRetryingFetch('https://dummyjson.com/products')
@@ -15,7 +15,12 @@ const Home = () => {
         <ul>
           {data?.products.map(product => (
             <li key={product.id}>
-              <Link to={`/detail/${product.id}`}>{product.title}</Link>
+              <Link to={`/detail/${product.id}`}>
+              <div className="product-container">
+                <img src={product.thumbnail} alt={product.title} />
+                <p>{product.title}</p>
+              </div>
+              </Link>
             </li>
           ))}
         </ul>
