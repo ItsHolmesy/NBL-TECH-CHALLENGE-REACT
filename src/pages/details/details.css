@@ -1,3 +1,14 @@
+/* Centering the product details */
+.details-page {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 /* Container for the product details */
 .product-details {
     display: flex;

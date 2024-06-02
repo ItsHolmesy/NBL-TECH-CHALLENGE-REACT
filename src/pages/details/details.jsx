@@ -15,7 +15,7 @@ const Details = () => {
   }
 
   return (
-    <div>
+    <div className='details-page'>
       <h1 className='product-title'>{productDetail?.title}</h1>
       <img className='product-details' src={productDetail?.thumbnail} alt={productDetail?.title} />
       <p className='product-details'>{productDetail?.description}</p>
