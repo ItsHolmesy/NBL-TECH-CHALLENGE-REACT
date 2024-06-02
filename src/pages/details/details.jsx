@@ -1,5 +1,6 @@
 import { useParams } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
+import './details.css'
 
 const Details = () => {
   const params = useParams()
@@ -15,11 +16,11 @@ const Details = () => {
 
   return (
     <div>
-      <h1>{productDetail?.title}</h1>
+      <h1 className='product-title'>{productDetail?.title}</h1>
       <img src={productDetail?.thumbnail} alt={productDetail?.title} />
-      <p>{productDetail?.description}</p>
-      <p>Price: ${productDetail?.price}</p>
-      <p>Brand: {productDetail?.brand}</p>
+      <p className='product-details'>{productDetail?.description}</p>
+      <p className='product-price'>Price: ${productDetail?.price}</p>
+      <p className='product-brand'>Brand: {productDetail?.brand}</p>
     </div>
   );
 }

@@ -1,0 +1,56 @@
+/* Body styling to make sure it takes the full height */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+
+
+/* Container for the product details */
+.product-details {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+    padding: 20px;
+    /* Bordering */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px;
+    margin: 20px;
+}
+  
+/* Image styling */
+.product-details img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+  
+/* Product Title Styling */
+.product-title {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+  
+/* Description styling */
+.product-details {
+    margin: 10px 0; 
+    font-size: 1em;
+}
+  
+/* Price and brand styling */
+.product-price .product-brand {
+    font-size: 1.2em;
+    margin: 10px 0;
+}  
