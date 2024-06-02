@@ -13,7 +13,7 @@ const fetchRetry = async (url, options = {}, retryTimes = 3, retryTimeMS = 1000)
       return sleep(retryTimeMS).then(() => fetchRetry(url, options, --retryTimes, retryTimeMS))
     }
 
-    return fetch(url, options).catch((error) => retry(error, retryTimes))
+    return fetch(url, options).then(async (response) => await response.json()).catch((error) => retry(error, retryTimes))
   };
   
   export default fetchRetry;

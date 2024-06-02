@@ -5,6 +5,7 @@ import fetchRetry from '../../utils/fetchRetry';
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,11 +14,22 @@ const Home = () => {
         setProducts(data.products);
       } catch (error) {
         setError(error.message);
+      } finally {
+        setLoading(false); // Update loading state
       }
     };
 
     fetchData();
   }, []);
+
+    // Render based on state
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <>
@@ -26,7 +38,7 @@ const Home = () => {
         <p>Error: {error}</p>
       ) : (
         <ul>
-          {products.map(item => (
+          {products.map(product => (
             <li key={product.id}>
               <Link to={`/detail/${product.id}`}>{product.title}</Link>
             </li>
