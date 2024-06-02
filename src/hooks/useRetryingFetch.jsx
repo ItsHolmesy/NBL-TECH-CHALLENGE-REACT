@@ -19,7 +19,7 @@ const useRetryingFetch = (url, options, retryTimes = 3, retryTimeMS = 300) => {
         setIsLoading(false)
         setError(error)
       }
-      // Wait if error, retry after delay.
+      // Wait if error, retry after delay, subtract retry attempt.
       return sleep(retryTimeMS).then(() => fetchRetry(--retriesRemain))
     }
     
