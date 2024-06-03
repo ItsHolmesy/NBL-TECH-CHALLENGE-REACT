@@ -5,6 +5,8 @@
 	2. Created baseline files and directories
 	3. Built error testing & Retry System
 	4. Migrated Retry System into a Hook.
+	5. Implement Unit Testing
+	6. Include Internationalisation
 
 ## EXPLANATIONS
 
@@ -26,6 +28,10 @@ Initially I built out some tests for the API fetching and display. Given the tim
 
 Wouter works off of Hooks, which was a tool I wanted to really demonstrate here, by combining the API fetching and retry system I was able to remove a lot of the workload from the 'front end' of the app itself.
 
+### Implement Unit Testing
+
+Opting for vitest, a testing framework designed specifically for vite, featuring seamless integration with it and its ease of use - also its syntax is incredibly similar to that of jest, and is compatible with it as well. Vitest is also more efficient, as it uses Vite's fast building and transformation functionality. 
+
 ## FURTHER IMPROVEMENTS
 
 Given unlimited time etc, (and also if I hadn't have been sick during the entire timeframe) there are a number of improvements that could be made to the codebase:
@@ -39,5 +45,5 @@ Given unlimited time etc, (and also if I hadn't have been sick during the entire
 - Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls. Also high on my list would be a search function and sort by category.
 
 
-## HOW-TO
+## HOW-TO/DEPENDENCIES
 Please download the file as a zip, and run via commandline as ```npm run build.```
