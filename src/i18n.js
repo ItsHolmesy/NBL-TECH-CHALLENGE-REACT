@@ -8,10 +8,13 @@ i18n
   .use(LanguageDetector) // Detect user language
   .use(initReactI18next) // Pass the i18n instance to react-i18next.
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'en', // Set fallback to English.
     debug: true,
     interpolation: {
       escapeValue: false, // React already does escaping
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
