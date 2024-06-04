@@ -1,3 +1,6 @@
+// Importing colors
+@import './styles/variables';
+
 @font-face {
   font-family: 'Poppins';
   src: url(../src/assets/fonts/Poppins-Regular.ttf);
@@ -16,6 +19,12 @@ body {
   width: 100%;
   height: auto;
   margin: 0;
-  background: #f0f0f0;
+  background: $background-color;
   font-family: 'Poppins';
+  color: $primary-text-color;
+}
+
+.page-name {
+  font-size: 3em;
+  align-items: center;
 }

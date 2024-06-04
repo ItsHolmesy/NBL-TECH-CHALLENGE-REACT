@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
 import './home.css'
@@ -8,7 +9,7 @@ const Home = () => {
   // Render list of items.
   return (
     <>
-      <h1>Home Page</h1>
+      <h1 className='page-name'>Home: Products</h1>
       {error ? (
         <p>Error: {error}</p>
       ) : (
