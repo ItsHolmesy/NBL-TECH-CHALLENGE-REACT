@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite/config'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
@@ -9,7 +9,7 @@ export default defineConfig({
     // Add jsdom to vite
     environment: 'jsdom',
     // Include Wildcards
-    include: ['**/*.test.jsx'],
+    include: ['**/*.test.js*'],
     // Make them global
     globals: true,
     setupFiles: './src/tests/setup.js',

@@ -1,4 +1,3 @@
-
 describe('#useRetryingFetch', () => {
     describe('when making a request', () => {
         it('sets the loading state', () => {
