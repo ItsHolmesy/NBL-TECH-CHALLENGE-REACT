@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
-import './home.css'
+import './home.scss'
+
 
 const Home = () => {
   const [data, isLoading, error] = useRetryingFetch('https://dummyjson.com/products')

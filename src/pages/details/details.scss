@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 /* Centering the product details */
 .details-page {
     height: 100%;
@@ -21,7 +23,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: $background-color;
     max-width: 600px;
     margin: 20px;
 }
@@ -40,7 +42,6 @@
     margin: 0;
     padding: 0;
     font-size: 2em;
-    margin-bottom: 10px;
 }
   
 /* Description styling */
@@ -52,8 +53,11 @@
 /* Price and brand styling */
 .product-price .product-brand {
     font-size: 1.2em;
-    margin: 10px 0;
 }  
+
+.product-price {
+    margin: 10px 0;
+}
 
 .product-brand {
     font-style: italic;

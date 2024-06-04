@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
-import './details.css'
+import './details.scss'
 
 const Details = () => {
   const params = useParams()

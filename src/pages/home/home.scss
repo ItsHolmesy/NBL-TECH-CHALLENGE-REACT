@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 /* ITEM DISPLAY */
 ul {
     display: flex;
@@ -12,7 +14,7 @@ ul {
 li {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid $primary-text-color;
     border-radius: 4px;
     width: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Real subtle shadow effect */
@@ -20,7 +22,7 @@ li {
 }
 
 li:hover {
-    background-color: rgb(223, 223, 223);
+    background-color: $tertiary-color;
 }
 
 .product-container {
