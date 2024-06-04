@@ -6,7 +6,6 @@
 	3. Built error testing & Retry System
 	4. Migrated Retry System into a Hook.
 	5. Implement Unit Testing
-	6. Include Internationalisation
 
 ## EXPLANATIONS
 
@@ -31,6 +30,21 @@ Wouter works off of Hooks, which was a tool I wanted to really demonstrate here,
 ### Implement Unit Testing
 
 Opting for vitest, a testing framework designed specifically for vite, featuring seamless integration with it and its ease of use - also its syntax is incredibly similar to that of jest, and is compatible with it as well. Vitest is also more efficient, as it uses Vite's fast building and transformation functionality. 
+On Unit Test Number 3, there was an error being presented that I was unable to capture properly, though the test was passing. The code I did use was as follows:
+
+```
+fetch.mockResponse(Promise.reject())
+
+          await act(async () => {
+            try {
+              renderHook(() => useRetryingFetch(testUrl, {}, 1, retryTime))
+            } catch { }
+          })
+
+          vi.waitFor(() => expect(fetch).toHaveBeenCalledTimes(3))
+```
+Other tests are throwing errors as well, however this is expected behaviour, and I'm unsure of how to catch the ones the tests are complaining about - they at least put out passing data that I can verify is correct.
+
 
 ## FURTHER IMPROVEMENTS
 
