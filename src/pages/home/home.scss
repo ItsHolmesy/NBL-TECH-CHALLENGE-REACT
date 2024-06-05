@@ -29,16 +29,11 @@ li:hover {
 /* CATEGORY TABS */
 /*****************/
 
-.category-tab-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
 .category-tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .category-tabs button {
@@ -52,6 +47,7 @@ li:hover {
     cursor: pointer;
     transition: $background-color 0.3s;
     text-transform: uppercase;
+    flex: 1;
 }
 
 .category-tabs button.active {
@@ -100,13 +96,8 @@ li:hover {
         font-size: 0.875em;
     }
 
-    .category-tab-wrapper {
-        padding-left: 20px;
-    }
-
     .category-tabs {
         justify-content: flex-start;
-        padding-left: 20px;
     }
 }
 
@@ -133,4 +124,3 @@ a {
     text-decoration: none;
     color: inherit;
 }
-

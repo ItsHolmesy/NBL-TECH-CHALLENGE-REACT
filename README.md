@@ -58,11 +58,11 @@ Given unlimited time etc, (and also if I hadn't have been sick during the entire
 
 - Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls.
 
-- Categorisation - Reading through DummyJSON, I'd really love to implement tabs along the top of the page that would allow users to search by category, making it further accessible for users seeking to look for a particular product.
-
+- Code Improvements - I know that my second hook for categorisation could be improved, or even cleaned up further. Perhaps
 
 ## KNOWN ISSUES
-- Testing - On Unit Test Number 3, there was an error being presented that I was unable to capture properly, though the test was passing. The code I did use was as follows:
+### Testing 
+- Unit Test - Unit Test Number 3, there was an error being presented that I was unable to capture properly, though the test was passing. The code I did use was as follows:
 ```js
 fetch.mockResponse(Promise.reject())
 
@@ -75,6 +75,9 @@ fetch.mockResponse(Promise.reject())
           vi.waitFor(() => expect(fetch).toHaveBeenCalledTimes(3))
 ```
 Other tests are throwing errors as well, however this is expected behaviour, and I'm unsure of how to catch the ones the tests are complaining about - they at least put out passing data that I can verify is correct.
+
+### Visual
+- Jitter - And incredibly minor pet-peeve. There is a small amount of jitter when changing categories. I'm unsure what could be causing this or how to fix this. Feedback or advice would be very much appreciated!
 
 ## HOW-TO/DEPENDENCIES
 Please download the file as a zip, and run via commandline as ```npm run build.```

@@ -14,7 +14,6 @@ const Home = () => {
     <>
       <h1 className='page-name'>Home</h1>
       {/* Render category tabs */}
-      <div className='category-tab-wrapper'>
         <div className="category-tabs">
           {Object.keys(categorisedProducts).map(category => (
             <button
@@ -26,7 +25,6 @@ const Home = () => {
             </button>
           ))}
         </div>
-      </div>
       {/* Render products based on active category */}
       {error ? (
         <p>Error: {error}</p>
