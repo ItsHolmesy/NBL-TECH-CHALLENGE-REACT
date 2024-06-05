@@ -5,7 +5,7 @@ function sleep(timeMS) {
   return new Promise((resolve) => setTimeout(resolve, timeMS))
 }
 
-// Custom fetch hook including retry logic.
+// Fetch hook including retry logic.
 const useRetryingFetch = (url, options, retryTimes = 3, retryTimeMS = 300) => {
   const [isLoading, setIsLoading] = useState(false)
   const [result, setResult] = useState(null)

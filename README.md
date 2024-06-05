@@ -56,7 +56,9 @@ Given unlimited time etc, (and also if I hadn't have been sick during the entire
 
 - Implement device variability - I had intended to use Sass to help with getting the website ready for mobile devices and varying screen sizes. However, given time constraints I was unable to do so. You can see the basic setup for it within the _variables.scss file contained within the styles folder.
 
-- Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls. Also high on my list would be a search function and sort by category.
+- Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls.
+
+- Categorisation - Reading through DummyJSON, I'd really love to implement tabs along the top of the page that would allow users to search by category, making it further accessible for users seeking to look for a particular product.
 
 
 ## HOW-TO/DEPENDENCIES

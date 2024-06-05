@@ -8,9 +8,25 @@
     justify-content: center;
     flex-direction: column; 
     align-items: center;
+    position: relative;
 }
 
+/* Back Button Styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
 
+.back-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.back-button:hover .back-icon {
+    opacity: 0.7;
+}
 
 /* Container for the product details */
 .product-details {
@@ -27,13 +43,23 @@
     margin: 20px;
 }
   
+.product-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px;
+    flex-direction: column;
+}
+
 /* Image styling */
 .product-details img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
   
 /* Product Title Styling */
@@ -64,19 +90,58 @@
     font-style: italic;
 }
 
-/* Back Button Styling */
-.back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
+
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media (max-width: $screen-large) {
+    .product-container {
+        max-width: 90%;
+    }
+
+    .product-title {
+        font-size: 1.75em;
+    }
 }
 
-.back-icon {
-    width: 48px;
-    height: 48px;
+@media (max-width: $screen-medium) {
+    .product-container {
+        padding: 15px;
+        max-width: 80%;
+    }
+
+    .product-title {
+        font-size: 1.5em;
+    }
+    
+    .product-details {
+        font-size: 0.875em;
+    }
+
+    .product-details img {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
 }
 
-.back-button:hover .back-icon {
-    opacity: 0.7;
+@media (max-width: $screen-small) {
+    .product-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .product-title {
+        font-size: 1.25em;
+    }
+
+    .product-details {
+        font-size: 0.75em;
+    }
+
+    .product-details img {
+        padding-bottom: 3px;
+        margin-bottom: 5px;
+    }
 }
