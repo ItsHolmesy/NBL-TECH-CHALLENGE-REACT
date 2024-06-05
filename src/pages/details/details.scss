@@ -15,7 +15,6 @@
 /* Container for the product details */
 .product-details {
     display: flex;
-
     align-items: center;    
     text-align: center;
     padding: 20px;
@@ -55,10 +54,29 @@
     font-size: 1.2em;
 }  
 
+/* Price Styling */
 .product-price {
     margin: 10px 0;
 }
 
+/* Brand Styling */
 .product-brand {
     font-style: italic;
+}
+
+/* Back Button Styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.back-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.back-button:hover .back-icon {
+    opacity: 0.7;
 }

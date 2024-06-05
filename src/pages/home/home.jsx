@@ -10,7 +10,7 @@ const Home = () => {
   // Render list of items.
   return (
     <>
-      <h1 className='page-name'>Home: Products</h1>
+      <h1 className='page-name'>Home</h1>
       {error ? (
         <p>Error: {error}</p>
       ) : (
