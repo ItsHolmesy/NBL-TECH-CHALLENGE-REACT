@@ -25,6 +25,41 @@ li:hover {
     background-color: $tertiary-color;
 }
 
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media (max-width: $screen-large) {
+    li {
+        width: 300px;
+    }
+}
+
+/* Turn products flex-direction into a column to better fit screen */
+@media (max-width: $screen-medium) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: $screen-small) {
+    li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .product-container p {
+        font-size: 0.875em;
+    }
+}
+
+
 .product-container {
     display: flex;
     flex-direction: column; 
@@ -47,3 +82,5 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+

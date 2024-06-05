@@ -22,9 +22,36 @@ body {
   background: $background-color;
   font-family: 'Poppins';
   color: $primary-text-color;
+  font-size: 1rem;
 }
 
+/* Titles for Both Home & Details */
 .page-name {
   font-size: 3em;
-  align-items: center;
+  text-align: center;
+  margin: 20px 0; 
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media (max-width: $screen-medium) {
+  .page-name {
+    font-size: 2em;
+  }
+
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: $screen-small) {
+  .page-name {
+    font-size: 1.5em;
+  }
+
+  body {
+    font-size: 0.75rem;
+  }
 }
