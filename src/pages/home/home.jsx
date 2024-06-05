@@ -14,16 +14,18 @@ const Home = () => {
     <>
       <h1 className='page-name'>Home</h1>
       {/* Render category tabs */}
-      <div className="category-tabs">
-        {Object.keys(categorisedProducts).map(category => (
-          <button
-            key={category}
-            onClick={() => handleCategoryClick(category)}
-            className={category === activeCategory ? 'active' : ''}
-          >
-            {category}
-          </button>
-        ))}
+      <div className='category-tab-wrapper'>
+        <div className="category-tabs">
+          {Object.keys(categorisedProducts).map(category => (
+            <button
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              className={category === activeCategory ? 'active' : ''}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
       {/* Render products based on active category */}
       {error ? (
