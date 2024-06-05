@@ -6,6 +6,8 @@
 	3. Built error testing & Retry System
 	4. Migrated Retry System into a Hook.
 	5. Implement Unit Testing
+  6. Mobile Compatibility
+  7. Implement Categorisation
 
 ## EXPLANATIONS
 
@@ -30,21 +32,14 @@ Wouter works off of Hooks, which was a tool I wanted to really demonstrate here,
 ### Implement Unit Testing
 
 Opting for vitest, a testing framework designed specifically for vite, featuring seamless integration with it and its ease of use - also its syntax is incredibly similar to that of jest, and is compatible with it as well. Vitest is also more efficient, as it uses Vite's fast building and transformation functionality. 
-On Unit Test Number 3, there was an error being presented that I was unable to capture properly, though the test was passing. The code I did use was as follows:
 
-```
-fetch.mockResponse(Promise.reject())
+### Mobile Compatibility
 
-          await act(async () => {
-            try {
-              renderHook(() => useRetryingFetch(testUrl, {}, 1, retryTime))
-            } catch { }
-          })
+Mobile compatibility was a big goal from the start, having been absent from prior projects and code-tests I wanted to have somewhat decent mobile implementation. Using Sass's variable storage, I stored a number of screen size variables to make this process far more streamlined.
 
-          vi.waitFor(() => expect(fetch).toHaveBeenCalledTimes(3))
-```
-Other tests are throwing errors as well, however this is expected behaviour, and I'm unsure of how to catch the ones the tests are complaining about - they at least put out passing data that I can verify is correct.
+### Implement Categorisation
 
+Seeing I had some spare time, I set about building an additional hook for categorising the products as they came in, relying on DummyJSON's own internal information. Also leveraging wouter's reliance on hooks for this. I'm pleased with how this came out, even if there are some improvements that could potentially be made.
 
 ## FURTHER IMPROVEMENTS
 
@@ -54,11 +49,13 @@ Given unlimited time etc, (and also if I hadn't have been sick during the entire
 
  - Extend more error types - Currently I've just used some basic error types, but error handling could be much improved by adding unique error types that can be caught and handled. This could then allow reintroduction of an error map using the error type as keys.
 
-- Implement device variability - I had intended to use Sass to help with getting the website ready for mobile devices and varying screen sizes. However, given time constraints I was unable to do so. You can see the basic setup for it within the _variables.scss file contained within the styles folder.
+ - Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls.
 
-- Further functionality - I'd love, if granted further time to implement an optional font that makes the website easier to read for those who are dyslexic, and properly implement keyboard controls.
+ - Code Improvements - I know that my second hook for categorisation could be improved, or even cleaned up further. Doing further reading, I could potentially utilise ```reduce```.
 
-- Code Improvements - I know that my second hook for categorisation could be improved, or even cleaned up further. Perhaps
+ - Increased Accessibility - There are a number of accessibility improvements that could be made, keyboard shortcutting is the big one. Though given time constraints I was unable to do so while focussing on the main features.
+
+ - Internationalisation - Had I more time, I'd implement it, however i18n is time-consuming and as such couldn't commit to it in the time frame provided.
 
 ## KNOWN ISSUES
 ### Testing 
@@ -77,7 +74,7 @@ fetch.mockResponse(Promise.reject())
 Other tests are throwing errors as well, however this is expected behaviour, and I'm unsure of how to catch the ones the tests are complaining about - they at least put out passing data that I can verify is correct.
 
 ### Visual
-- Jitter - And incredibly minor pet-peeve. There is a small amount of jitter when changing categories. I'm unsure what could be causing this or how to fix this. Feedback or advice would be very much appreciated!
+- Jitter - And incredibly minor pet-peeve. There is a small amount of jitter when changing categories for the first time. I'm unsure what could be causing this or how to fix this. Feedback or advice would be very much appreciated!
 
 ## HOW-TO/DEPENDENCIES
 Please download the file as a zip, and run via commandline as ```npm run build.```
