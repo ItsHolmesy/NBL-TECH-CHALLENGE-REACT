@@ -21,7 +21,7 @@ describe('#useRetryingFetch', () => {
       
             vi.waitFor(() => expect(isLoading).toBe(true))
         })
-
+        
         describe('when the request is successful', () => {
             it('provides the resulting data', async () => {
                 fetch.mockResponse(Promise.resolve('test'))
