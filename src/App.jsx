@@ -6,15 +6,12 @@ import Header from './components/header';
 
 const App = () => {
   return (
-    <div>
-      <Header />
       <Router>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/detail/:id" component={Details} />
         </Switch>
       </Router>
-    </div>
   );
 }
 
