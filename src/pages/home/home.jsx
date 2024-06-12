@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
 import useCategorisedProducts from '../../hooks/useCategorisedProducts.jsx';
-import Header from '../../components/header.jsx';
 import './home.scss'
 
 
 const Home = () => {
-  const [data, isLoading, error] = useRetryingFetch('https://dummyjson.com/products')
+  const [data, isLoading, error] = useRetryingFetch('https://dummyjson.com/products?limit=0')
   const { categorisedProducts, activeCategory, handleCategoryClick } = useCategorisedProducts(data?.products || []);
 
   // Render list of items.
