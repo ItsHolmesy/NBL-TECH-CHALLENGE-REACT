@@ -9,6 +9,13 @@
   6. Mobile Compatibility
   7. Implement Categorisation
 
+## To-Do
+  1. Build Header
+  2. Change SCSS to 'beautify' page
+  3. Implement Shopping Cart
+  4. Expand available products
+  5. Build Search Function
+
 ## EXPLANATIONS
 
 ### Build application/Wouter Usage
