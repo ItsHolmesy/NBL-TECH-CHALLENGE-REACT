@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'wouter';
 import useRetryingFetch from '../../hooks/useRetryingFetch';
 import useCategorisedProducts from '../../hooks/useCategorisedProducts.jsx';
+import Header from '../../components/header.jsx';
 import './home.scss'
 
 
